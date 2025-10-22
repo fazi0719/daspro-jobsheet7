@@ -138,3 +138,11 @@ public class SiakadWhile06 {
 
 
 PERCOBAAN 3
+1. Pada penggunaan DO-WHILE ini, apabila nama pelanggan yang dimasukkan pertama kali adalah “batal”, maka berapa kali perulangan dilakukan?
+jawab: 1 kali
+2. Sebutkan kondisi berhenti yang digunakan pada perulangan DO-WHILE tersebut! 
+Jawab: break 
+3. Apa fungsi dari penggunaan nilai true pada kondisi DO-WHILE?
+Jawab: digunakan untuk membuat perulangan berjalan terus tanpa batas tertentu, dan penghentiannya dikendalikan dari dalam perulangan (misalnya lewat break)
+4. Mengapa perulangan DO-WHILE tersebut tetap berjalan meskipun tidak ada komponen inisialisasi dan update?
+Jawab: Perulangan do–while tetap berjalan meskipun tidak ada inisialisasi dan update karena kondisi while(true) selalu benar, sehingga program tidak perlu variabel penghitung untuk melanjutkan perulangan. Penghentian loop dikendalikan secara manual, misalnya menggunakan break
