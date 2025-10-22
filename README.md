@@ -36,8 +36,58 @@ Kalau dibalik (tertinggi = 100 dan terendah = 0), maka perbandingan tidak akan p
             2.Jika kondisi ini Benar (true), artinya nilai yang baru adalah rekor terendah.
             3.⁠⁠Variabel terendah diperbarui (diisi ulang) dengan nilai yang baru (terendah = nilai;).
             4.Jika kondisi Salah (false), terendah tetap menggunakan nilai sebelumnya.
-            
+
 4. Modifikasi kode program sehingga terdapat perhitungan untuk menentukan berapa
 mahasiswa yang lulus dan yang tidak lulus berdasarkan batas kelulusan (nilai minimal 60).
 Tampilkan jumlah mahasiswa lulus dan tidak lulus setelah menampilkan nilai tertinggi
 dan terendah!
+Jawab: 
+import java.util.Scanner;
+public class SiakadFor06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+
+       double nilai, tertinggi = 0, terendah = 100;
+       int jumlahMahasiswaLulus = 0,jumlahMahasiswaTidakLulus=0;
+
+       for (int i = 1; i <= 10; i++) {
+           System.out.print("Masukkan nilai mahasiswa ke-" + i + ": ");
+           nilai = sc. nextDouble();
+
+           if (nilai > tertinggi) {
+               tertinggi = nilai;
+           }
+           if (nilai < terendah) {
+               terendah = nilai;
+           }
+           if (nilai >= 60) {
+              jumlahMahasiswaLulus++;
+           }
+           else  {
+               jumlahMahasiswaTidakLulus++;
+       }
+       
+     } 
+       System.out.println("Nilai tertinggi: " + tertinggi);
+       System.out.println("Nilai terendah: " + terendah);
+       System.out.println("Jumlah mahasiswa yang lulus: " + jumlahMahasiswaLulus);
+       System.out.println("Jumlah mahasiswa yang tidak lulus: " + jumlahMahasiswaTidakLulus);        
+    }
+
+}
+
+
+PERCOBAAN 2
+1. Pada potongan kode berikut, tentukan maksud dan kegunaan dari sintaks berikut:
+a. nilai < 0 || nilai > 100 
+jawab: nilai < 0 Kondisi pertama: Memeriksa apakah variabel nilai memiliki nilai yang kurang dari nol (negatif).
+nilai > 100	Kondisi kedua: Memeriksa apakah variabel nilai memiliki nilai yang lebih dari seratus.
+||: digunakan untuk melihat kondisi ini akan benar (true) kalau salah satu dari dua syarat terpenuhi.
+Kesimpulannya, nilai < 0 || nilai > 100 digunakan untuk memeriksa apakah nilai berada di luar batas yang diperbolehkan, yaitu antara 0 sampai 100.
+b. continue
+jawab: perintah untuk melewati atau skip eksekusi iterasi perulangan yang sedang berjalan saat ini dan langsung melompat ke iterasi perulangan berikutnya
+2. Mengapa sintaks i++ dituliskan di akhir perulangan WHILE? Apa yang terjadi jika posisinya dituliskan di awal perulangan WHILE?
+Jawab: i++ digunakan untuk menambahkan nilai  agar perulangan bisa berjalan ke mahasiswa berikutnya. Jika ditulis di awal maka perhitungannya naik terlebih dahulu sebelum peng-input dilakukan.
+3. Apabila jumlah mahasiswa yang dimasukkan adalah 19, berapa kali perulangan WHILE akan berjalan?
+Jawab: 18 kali karena diawali dari 0
+Modifikasi kode program sehingga apabila terdapat mahasiswa yang mendapat nilai A, program menampilkan pesan tambahan "Bagus, pertahankan nilainya"!
